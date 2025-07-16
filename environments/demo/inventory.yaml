@@ -15,22 +15,22 @@ all:
         licensemaster:
           hosts:
             my-lm-host:
-              ansible_host:
+              ansible_host: 10.0.26.242
 
         deploymentserver:
           hosts:
             my-ds:
-              ansible_host:
+              ansible_host: 10.0.24.226
 
         dmc:
           hosts:
             my-dmc-host:
-              ansible_host:
+              ansible_host: 10.0.27.62
 
         shdeployer:
           hosts:
             my-shc-deployer:
-              ansible_host:
+              ansible_host: 10.0.25.182
           vars:
             target_shc_group_name: splunk_shc
 
@@ -39,33 +39,33 @@ all:
             splunk_shc:
               hosts:
                 sh-01:
-                  ansible_host:
+                  ansible_host: 10.0.27.30
                 sh-02:
-                  ansible_host:
+                  ansible_host: 10.0.19.88
                 sh-03:
-                  ansible_host:
+                  ansible_host: 10.0.25.176
 
         heavyforwarder:
           hosts:
             my-hf-01:
-              ansible_host:
+              ansible_host: 10.0.18.250
 
 
         clustermanager:
           hosts:
             my-idxm-host:
-              ansible_host:
+              ansible_host: 10.0.20.206
 
         indexer:
           hosts:
             idx-01:
-              ansible_host:
+              ansible_host: 10.0.17.225
             idx-02:
-              ansible_host:
+              ansible_host: 10.0.20.223
             idx-03:
-              ansible_host:
+              ansible_host: 10.0.25.241
 
-        standalone:
-          hosts:
-            my-standalone-splunk-server:
-              ansible_host: 10.0.18.119
+        # standalone:
+        #   hosts:
+        #     my-standalone-splunk-server:
+        #       ansible_host: 10.0.18.119
