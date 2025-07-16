@@ -12,6 +12,59 @@ all:
     full:
       children:
 
+        licensemaster:
+          hosts:
+            my-lm-host:
+              ansible_host:
+
+        deploymentserver:
+          hosts:
+            my-ds:
+              ansible_host:
+
+        dmc:
+          hosts:
+            my-dmc-host:
+              ansible_host:
+
+        shdeployer:
+          hosts:
+            my-shc-deployer:
+              ansible_host:
+          vars:
+            target_shc_group_name: splunk_shc
+
+        search:
+          children:
+            splunk_shc:
+              hosts:
+                sh-01:
+                  ansible_host:
+                sh-02:
+                  ansible_host:
+                sh-03:
+                  ansible_host:
+
+        heavyforwarder:
+          hosts:
+            my-hf-01:
+              ansible_host:
+
+
+        clustermanager:
+          hosts:
+            my-idxm-host:
+              ansible_host:
+
+        indexer:
+          hosts:
+            idx-01:
+              ansible_host:
+            idx-02:
+              ansible_host:
+            idx-03:
+              ansible_host:
+
         standalone:
           hosts:
             my-standalone-splunk-server:
